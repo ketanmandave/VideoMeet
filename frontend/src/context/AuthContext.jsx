@@ -9,7 +9,7 @@ const AuthProvider = ({ children }) => {
   const [userdata, setUserdata] = useState({});
 
   const client = axios.create({
-    baseURL: "http://localhost:8000/api/v1/users",
+    baseURL: "https://your-app-backend-1dz5.onrender.com/api/v1/users",
   });
 
   const handleRegister = async (name, username, password) => {
