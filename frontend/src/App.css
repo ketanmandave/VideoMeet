@@ -1,0 +1,128 @@
+/* Updated CSS */
+.landingPageContainer {
+width: 100vw;
+min-height: 100vh;
+background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('/public/background.png') center/cover no-repeat;
+color: white;
+display: flex;
+flex-direction: column;
+}
+
+
+.landingPageContainer nav {
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+backdrop-filter: blur(8px);
+background: rgba(0, 0, 0, 0.4);
+border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.landingPageContainer nav h2 {
+font-size: 2rem;
+font-weight: 600;
+letter-spacing: 1px;
+}
+
+
+.landingPageContainer nav .navlist {
+display: flex;
+gap: 1.5rem;
+cursor: pointer;
+font-size: 1rem;
+font-weight: 500;
+}
+
+
+.landingPageContainer nav .navlist p:hover,
+.landingPageContainer nav .navlist div[role='button'] p:hover {
+color: #FF9839;
+transition: color 0.3s ease;
+}
+
+.landingMainContainer {
+display: flex;
+justify-content: space-between;
+padding: 3rem;
+flex: 1;
+align-items: center;
+gap: 2rem;
+flex-wrap: wrap;
+}
+
+
+.landingMainContainer>div:nth-child(1) {
+max-width: 600px;
+}
+
+
+.landingMainContainer>div:nth-child(1) h1 {
+font-size: clamp(2rem, 5vw, 3.5rem);
+line-height: 1.2;
+margin-bottom: 1rem;
+}
+
+
+.landingMainContainer>div:nth-child(1) p {
+font-size: 1.2rem;
+opacity: 0.85;
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] {
+background: linear-gradient(135deg, #FF9839, #D97500);
+width: fit-content;
+padding: 0.8rem 1.6rem;
+border-radius: 30px;
+margin-top: 1.5rem;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.landingMainContainer>div:nth-child(1) div[role='button']:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+.landingMainContainer>div:nth-child(1) div[role='button'] a {
+text-decoration: none;
+color: white;
+font-size: 1.3rem;
+font-weight: 600;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+max-height: 65vh;
+max-width: 100%;
+object-fit: contain;
+border-radius: 20px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.landingMainContainer {
+flex-direction: column;
+text-align: center;
+padding: 2rem 1rem;
+}
+
+
+.landingMainContainer>div:nth-child(2) img {
+max-height: 40vh;
+}
+
+
+.landingPageContainer nav {
+flex-direction: column;
+gap: 0.5rem;
+}
+
+
+.landingPageContainer nav .navlist {
+gap: 1rem;
+}
+}
