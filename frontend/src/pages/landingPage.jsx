@@ -10,8 +10,7 @@ const LandingPage = () => {
       {/* Navbar */}
       <nav className="navbar">
         <h2 className="logo">VideoMeet</h2>
-        <div className="nav-links">
-          <p onClick={() => router("/febbf3eb")}>Join as Guest</p>
+        <div className="nav-links">  
           <p onClick={() => router("/auth")}>Register</p>
           <button className="login-btn" onClick={() => router("/auth")}>
             Login
