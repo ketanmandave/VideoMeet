@@ -14,8 +14,6 @@ import CloseIcon from '@mui/icons-material/Close'
 import SendIcon from '@mui/icons-material/Send'
 import styles from "../styles/videoComponent.module.css";
 import { useNavigate } from "react-router-dom";
-const navigate = useNavigate();
-
 
 const server_url = process.env.NODE_ENV === "production" 
   ? "https://your-app-backend-1dz5.onrender.com" 
@@ -35,6 +33,8 @@ const peerConfigConnections = {
 };
 
 const VideoMeet = () => {
+
+    const navigate = useNavigate();
     var socketRef = useRef();
     let socketIdRef = useRef();
     let localVideoref = useRef();
